@@ -28,8 +28,8 @@ usage= ''' Description:  Get intergenic regions between query gene and upstream 
 
 parser = argparse.ArgumentParser(description=usage)
 parser.add_argument("-ot", "--operontsv", help="Operon tsv file")
-parser.add_argument("-sp", "--sposition", help="300 or 700, Upstream is extracted based on the position input, but within the same contig, even if it encroaches in upstream genes\nDefault is intergenic nucleotides between preceding gene end to query gene start")
-parser.add_argument("-ip", "--iposition", help="300 or 700, Upstream is extracted only from the intergenic region. \nDefault is intergenic nucleotides between preceding gene end to query gene start")
+parser.add_argument("-sp", "--sposition", help="300 or 700, Upstream is extracted based on the position input, but within the same contig, even if it encroaches in upstream genes. Default is intergenic nucleotides between preceding gene end to query gene start")
+parser.add_argument("-ip", "--iposition", help="300 or 700, Upstream is extracted only from the intergenic region. Default is intergenic nucleotides between preceding gene end to query gene start")
 parser.add_argument("-o", "--out_prefix", required= True, help="Any Keyword to define your output eg. MyQuery")
 parser.add_argument("-k", "--keep", action="store_true", help="If you want to keep the intermediate files eg. gff3 use [-k]. By default it will remove.")
 parser.add_argument("-v", "--version", action="version", version='%(prog)s 1.0.1')
